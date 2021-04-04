@@ -89,14 +89,14 @@ OR TRAN_DESC = 'Good Chicken, St Leonards PTY LTD'
 
 
 -- Confusing Point Alert: When dealing with the same column, OR is the correct SQL to transcribe what in English is referred to as "and"
--- Find all transctions to betting companies bet365 and betEASY
--- Find all transctions to either bet365 or betEASY
+-- Find all transactions to betting companies bet365 and betEASY
+-- Find all transactions to either bet365 or betEASY
 SELECT *
 FROM TRAN
 WHERE TRAN_DESC = 'bet365'
 OR TRAN_DESC = 'betEASY'
 ;
--- Find all transctions to betting companies bet365 and betEASY
+-- Find all transactions to betting companies bet365 and betEASY
 SELECT *
 FROM TRAN
 WHERE TRAN_DESC = 'bet365'
@@ -131,7 +131,7 @@ OR TRAN_A > 70
 ##################################################################
 
 -- 'Order of operations'
--- Just like multiplication preceeds addition, AND comes before OR
+-- ❗❗❗❗❗  Just like multiplication preceeds addition, AND comes before OR
 /* E.g.
 	2 + 5 x 5 
   = 2 + 25 

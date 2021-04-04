@@ -34,13 +34,13 @@ CREATE TABLE ROYAL_BANK_AUS.CUST_BASE
   , BRTH_DATE DATE 
   , JOIN_DATE DATE 
   , STATE VARCHAR(3)
-  , CLST_BRCH VARCHAR(200) --closest branch
-  , BRCH_CUST VARCHAR (1) --do they visit the branch
-  , DIGI_CUST VARCHAR (1) --have they logged in online / app
-  , APPL_PAY_ACTV_F VARCHAR (1)--have they activated apple pay
-  , FWB_NOTF_ACTV_F VARCHAR (1) --have they opted into financial well being notifications 
-  , MRKT_DNC_F VARCHAR (1) --have they opted out of marketing
-  , RVNU_YEAR_A INT --what revenue they're worth to the bank every year
+  , CLST_BRCH VARCHAR(200) -- closest branch
+  , BRCH_CUST VARCHAR (1) -- do they visit the branch
+  , DIGI_CUST VARCHAR (1) -- have they logged in online / app
+  , APPL_PAY_ACTV_F VARCHAR (1)-- have they activated apple pay
+  , FWB_NOTF_ACTV_F VARCHAR (1) -- have they opted into financial well being notifications 
+  , MRKT_DNC_F VARCHAR (1) -- have they opted out of marketing
+  , RVNU_YEAR_A INT -- what revenue they're worth to the bank every year
   , SLRY_YEAR_A INT NULL 
 )
 ;
@@ -53,9 +53,9 @@ CREATE TABLE ROYAL_BANK_AUS.CUST_BASE
 -- DROP TABLE ROYAL_BANK_AUS.CUST_ACCT;
 CREATE TABLE ROYAL_BANK_AUS.CUST_ACCT
 (
-    ACCT_I INT PRIMARY KEY --unique account
-  , CUST_I INT  --the customer is repeated in several rows. can have several accounts
-  , CUST_ACCT_REL VARCHAR (100) --customer relationship with the account
+    ACCT_I INT PRIMARY KEY -- unique account
+  , CUST_I INT  -- the customer is repeated in several rows. can have several accounts
+  , CUST_ACCT_REL VARCHAR (100) -- customer relationship with the account
 )
 ;
 
@@ -68,12 +68,12 @@ CREATE TABLE ROYAL_BANK_AUS.ACCT_BASE
 (
     ACCT_I VARCHAR(4) PRIMARY KEY
   , OPEN_D DATE
-  , CLSE_D DATE --9999 not closed yet
-  , PDCT_TYPE_C	VARCHAR (10)  --product type
-  , OPEN_CHNL VARCHAR (100)	 --
-  , ASST_OPEN_CHNL_DETL	VARCHAR (100) --
-  , MOST_FREQ_USED_CHNL	VARCHAR (100) --
-  , MOST_FREQ_USED_CHNL_DETL VARCHAR (100) --
+  , CLSE_D DATE -- 9999 not closed yet
+  , PDCT_TYPE_C	VARCHAR (10)  -- product type
+  , OPEN_CHNL VARCHAR (100)	 
+  , ASST_OPEN_CHNL_DETL	VARCHAR (100) 
+  , MOST_FREQ_USED_CHNL	VARCHAR (100) 
+  , MOST_FREQ_USED_CHNL_DETL VARCHAR (100) 
 )
 ;
 
@@ -85,9 +85,9 @@ CREATE TABLE ROYAL_BANK_AUS.PDCT_REF
 (
     PDCT_TYPE_C VARCHAR (10) PRIMARY KEY
   , PDCT_TYPE VARCHAR (100)
-  , PDCT_TYPE_DETL VARCHAR (100) --low-fee card
-  , MNTH_FEE_COST INT --fee per customer per month
-  , EFFT_D DATE --opened date 
+  , PDCT_TYPE_DETL VARCHAR (100) -- low-fee card
+  , MNTH_FEE_COST INT -- fee per customer per month
+  , EFFT_D DATE -- opened date 
   , EXPY_D DATE
 )
 ;
@@ -99,13 +99,13 @@ CREATE TABLE ROYAL_BANK_AUS.PDCT_REF
 CREATE TABLE ROYAL_BANK_AUS.TRAN
 (
     TRAN_I INT PRIMARY KEY
-  , ACCT_I INT --account
+  , ACCT_I INT -- account
   , TRAN_D DATE
   , TRAN_TYPE TINYTEXT
-  , TRAN_BUSN_CATG TINYTEXT --business category
-  , TRAN_LOCN TINYTEXT --location
-  , TRAN_DESC TINYTEXT --the name of the business and where it is
-  , TRAN_A INT --amount (positive=amount spend by the customer/outgoing, negative represents incoming money into the account)
+  , TRAN_BUSN_CATG TINYTEXT -- business category
+  , TRAN_LOCN TINYTEXT -- location
+  , TRAN_DESC TINYTEXT -- the name of the business and where it is
+  , TRAN_A INT -- amount (positive=amount spend by the customer/outgoing, negative represents incoming money into the account)
 )
 ;
 
