@@ -1,0 +1,1 @@
+Start your project by running the create_database.sql file into the mySQL Dashboard;
